@@ -1,0 +1,13 @@
+version: '3'
+services:
+  jenkins:
+    container_name: davids_jenkins_container
+    image: 'dprovest/davids-jenkins:latest'
+    ports:
+      - '8080:8080'
+      - '50001:50000'
+    volumes:
+      - 'davids-jenkins_data:/dprovest/davids-jenkins'
+
+volumes:
+    davids-jenkins_data:
